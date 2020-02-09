@@ -1,0 +1,124 @@
+.page {
+
+    .widget {
+        color: $blue;
+        border: 1px solid currentColor;
+        border-radius: $rounded;
+        overflow: hidden;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        &-row:not(:last-child) {
+            border-bottom: 1px solid;
+        }
+
+        &-row {
+            display: flex;
+            align-items: stretch;
+
+            &-icon {
+                background-color: $blue_white;
+                width: 60px;
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center; 
+            }
+
+            &-content {
+                padding: 20px 15px;
+                font-size: 16px;
+            }
+        }
+
+        &-title {
+            padding: 20px 10px;
+            margin: 0;
+            font-size: 22px;
+            background-color: $blue;
+            color: $white;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            text-align: center;
+        }
+
+        .list {
+            margin: 0;
+            list-style: none;
+
+            &-item:not(:last-child) {
+                border-bottom: 1px solid $blue;
+            }
+
+            a {
+                color: $text;
+                border-bottom: 0;
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                font-weight: 300;
+                font-size: 16px;
+                padding-left: 72px;
+                padding-right: 30px;
+            }
+
+            svg {
+                height: 60px;
+                width: 60px;
+                padding: 18px;
+                position: absolute;
+                top: 1;
+                left: 0;
+                color: $blue;
+                background-color: $blue_white;
+            }
+
+            &-item {
+                position: relative;
+                height: 60px;
+                overflow: hidden;
+                display: flex;
+
+                &:hover {
+
+                    a {
+                        font-weight: 600;
+                    }
+
+                    svg {
+                        color: $text;
+                    }
+                }
+            }
+        }
+
+        &-green {
+            border-color: $green;
+
+            .widget {
+
+                &-title {
+                    background-color: $green;
+                }
+            }
+
+            .list {
+
+                &-item:not(:last-child) {
+                    border-bottom-color: $green;
+                }
+
+                &-item {
+
+                    svg {
+                        background-color: $green_light;
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+}

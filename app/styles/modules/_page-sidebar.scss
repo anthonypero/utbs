@@ -1,0 +1,26 @@
+.page-content.has-sidebar {
+    display: flex;
+
+    .sidebar {
+        width: 300px;
+        flex-shrink: 0;
+
+        &.right {
+            order: 2;
+            margin-left: 50px;
+        }
+
+        &.left {
+            order: 0;
+            margin-right: 50px;
+        }
+    }
+
+    .content {
+        order: 1;
+
+        :last-child {
+            margin-bottom: 0;
+        }
+    }
+}

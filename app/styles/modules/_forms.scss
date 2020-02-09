@@ -1,0 +1,55 @@
+form {
+
+    .form {
+        &-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+
+            input, textarea {
+                flex-shrink: 1;
+                flex-grow: 1;
+                border: none;
+                border-radius: $soften;
+                outline: none;
+                background: $gray_light;
+                font-size: 18px;
+                padding: 15px;
+
+                &::placeholder {
+                    color: rgba($text, .5);
+                }
+
+                &:focus::placeholder {
+                    color: rgba($text, 0);
+                }
+            }
+
+            textarea {
+                min-height: 300px;
+            }
+
+            label {
+                width: 100%;
+                font-size: 16px;
+                color: $text;
+                margin-bottom: 5px;
+            }
+        }
+
+        &-col {
+
+            &-2 {
+
+                input {
+                    margin-right: 15px;
+
+                    + input {
+                        margin-left: 15px;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

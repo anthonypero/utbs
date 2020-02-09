@@ -1,0 +1,34 @@
+#site {
+
+    &-header {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        background-color: $white;
+        box-shadow: 0 0 10px 0 rgba($black, .5);
+    }
+
+    &-branding {
+        padding: 3px 25px;
+        width: 125px;
+        height: 50px;
+        display: block;
+
+        svg {
+            width: 70px;
+            height: auto;
+        }
+    }
+}
+
+.sticky-header {
+    padding-top: 50px;
+
+    #site-header {
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+}

@@ -1,0 +1,123 @@
+#site {
+
+    &-navigation {
+        position: relative;
+        height: 50px;
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-end;
+        flex-grow: 1;
+
+        .menu-main-menu-container {
+            display: flex;
+            
+            .menu {
+                display: flex;
+
+                &-item {
+                    display: flex;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        padding: 0 15px;
+                        font-family: $body;
+                        text-decoration: none;
+                        color: $blue;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        font-size: 14px;
+                    }
+
+                    &:hover,
+                    &.current-menu-item,
+                    &.current-menu-ancestor {
+                        
+                        a {
+                            background-color: $blue-light;
+                        }
+                    }
+
+                    &:hover {
+
+                        .sub-menu {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+
+            .sub-menu {
+                position: absolute;
+                top: 50px;
+                right: 0px;
+                padding: 0 25px;
+                background-color: $blue-light;
+                width: 100vw;
+                display: none;
+                height: 50px;
+                justify-content: flex-end;
+
+                .menu-item {
+
+                    a {
+                        text-transform: capitalize;
+                    }
+
+                    &:hover,
+                    &.current-menu-item,
+                    &.current-menu-ancestor {
+
+                        a {
+                            background-color: $blue;
+                            color: $white;
+                        }
+                    }
+
+                    &:hover {
+
+                        .sub-menu {
+                            display: flex;
+                        }
+                    }
+
+                    .sub-menu {
+                        background-color: $blue;
+                        display: none;
+
+                        .menu-item {
+
+                            a {
+                                color: $blue-light;
+                                background: $blue;
+                            }
+
+                            &:hover,
+                            &.current-menu-item,
+                            &.current-menu-ancestor {
+                                
+                                a {
+                                    color: $white;
+                                    background: $blue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .search-icon {
+            display: flex;
+            align-items: center;
+            margin-right: 25px;
+            padding: 0 15px;
+            color: $blue;
+            font-size: 16px;
+
+            &:hover {
+                background-color: $blue-light;
+            }
+        }
+    }
+}
